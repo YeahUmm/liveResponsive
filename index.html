@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임다현 - Live Responsive</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" hrefs="https://cdn.jsdelivr.net/npm/inter@3.15.0/css/inter.css"> -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC|Noto+Sans+TC|Noto+Sans+KR&display=swap">
+    <script src="./script/live.js"></script>
+</head>
+
+<body>
+    <!-- header>.mainLogoMenus -->
+    <header>
+        <div class="mainLogoMenus">
+            <!-- logo -->
+            <!-- h1.logo>a>img -->
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo.svg" alt="로고"></a>
+            </h1>
+
+            <!-- pc menu -->
+            <!-- nav.menu>ul>li*5>a -->
+            <nav class="pcmenu">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">레퍼런스</a></li>
+                    <li><a href="#">스튜디오</a></li>
+                    <li><a href="#">Q &amp; A</a></li>
+                    <li><a href="#">문의사항</a></li>
+                </ul>
+            </nav>
+
+            <!-- mobilemenu -->
+            <!-- nav.mobilemenu>span>a>img -->
+            <!-- toggle버튼 = 햄버거버튼 = 상단메뉴를 새로운 창에 보이도록하는 메뉴버튼 -->
+            <!-- <nav class="mobilemenu">
+                <span onclick="openNav()">
+                    <a href="#"><img src="./images/toggle.svg" alt="토글메뉴"></a>
+                </span>
+            </nav> -->
+            <nav class="mobileMenu">
+
+                <!-- LINE -> X 변경 html -->
+                <div class="toggle-container" onclick="toggleMenu()">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+                <script>
+                    function toggleMemu() {
+                        var container = document.querySelector('.toggle-container');
+                        container.classList.toggle('active');
+                    }
+                   /* .classList - 클래스를 관리하는 속성임. 
+                   클래스의 이름을 추가, 제거, 또는 토글이 가능 */ 
+                    // .toggle() - 존재하면 제거하고, 없으면 추가 
+                </script>
+                <!-- #myNav.overlay>a.closeBtn -->
+                <div id="myNav" class="overlay">
+                    <!-- <a href="#" class="closeBtn" onclick="closeNav()">&times;</a> -->
+                    <!-- .overlay-content>ul>li*5>a -->
+                    <div class="overlay-content">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">레퍼런스</a></li>
+                            <li><a href="#">스튜디오</a></li>
+                            <li><a href="#">Q &amp A</a></li>
+                            <li><a href="#">문의사항</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- 메인 -->
+        <main>
+            <div class="centerImg">
+                <a href="#">
+                    <img src="./images/mainImg.png" alt="메인 이미지">
+                </a>
+            </div>
+        </main>
+        <footer>
+            <!-- .mainBtn>a>img -->
+            <div class="mainBtn">
+                <a href="#" class="layerpopup"><img src="./images/right-btn.svg" alt="하단버튼"></a>
+            </div>
+        </footer>
+        <!-- popup -->
+        <div class="popup"><span class="close">&times;</span></div>
+        <div class="bg"></div>
+    </header>
+    
+</body>
+
+</html>
